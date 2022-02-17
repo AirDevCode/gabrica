@@ -9,7 +9,6 @@
             <span class="item">1</span>
             <h5>Inscripción punto de venta</h5>
           </div>
-          <input type="date" formControlName="siteDate">
           <input type="text" formControlName="name" class="form-control" placeholder="Nombre del cliente"
            [ngClass]="{'error': controls['name'].errors && controls['name'].touched || formSended,
             'valid': controls['name'].valid}">
