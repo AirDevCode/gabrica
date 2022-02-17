@@ -1,0 +1,55 @@
+  <div class="container landing">
+    <div class="row">
+      <div class="col-lg-7 col-md-10">
+        <img class="landing__main-image" src="assets/pet.png" alt="pet">
+      </div>
+      <div class="col-lg-4 col-md-10">
+        <form [formGroup]="landingForm" class="landing__form" (ngSubmit)="send()">
+          <div class="landing__form__title">
+            <span class="item">1</span>
+            <h5>Inscripción punto de venta</h5>
+          </div>
+          <input type="date" formControlName="siteDate">
+          <input type="text" formControlName="name" class="form-control" placeholder="Nombre del cliente"
+           [ngClass]="{'error': controls['name'].errors && controls['name'].touched || formSended,
+            'valid': controls['name'].valid}">
+          <input type="text" formControlName="nit" class="form-control" placeholder="NIT" 
+          [ngClass]="{'error': controls['nit'].errors && controls['nit'].touched || formSended,
+            'valid': controls['nit'].valid}" aria-describedby="validationServer02Feedback">
+          <input type="text" formControlName="place" class="form-control" placeholder="Nombre del punto"
+          [ngClass]="{'error': controls['place'].errors && controls['place'].touched || formSended,
+            'valid': controls['place'].valid && controls['place'].touched || formSended}">
+          <input type="text" formControlName="team" class="form-control" placeholder="Nombre del equipo"
+          [ngClass]="{'error': controls['team'].errors && controls['team'].touched || formSended,
+          'valid': controls['team'].valid && controls['team'].touched || formSended}">
+          <select class="form-select form-select-lg mb-3" formControlName="city" aria-label=".form-select-lg example" placeholder="Ciudad"
+          [ngClass]="{'error': controls['city'].errors && controls['city'].touched || formSended,
+          'valid': controls['city'].valid && controls['city'].touched || formSended}">
+            <option value="1">Bogotá</option>
+            <option value="2">Pereira</option>
+            <option value="3">Medellín</option>
+            <option value="4">Cali</option>
+          </select>
+          <input type="text" formControlName="promotor" class="form-control" placeholder="Promotor"
+          [ngClass]="{'error': controls['promotor'].errors && controls['promotor'].touched || formSended,
+          'valid': controls['promotor'].valid && controls['promotor'].touched || formSended}">
+          <input type="number" formControlName="rtc" class="form-control" placeholder="RTC"
+          [ngClass]="{'error': controls['rtc'].errors && controls['rtc'].touched || formSended,
+          'valid': controls['rtc'].valid && controls['rtc'].touched || formSended}">
+          <input type="text" formControlName="captain" class="form-control" placeholder="Capitán y/o usuario (Sólo minúsculas)"
+          [ngClass]="{'error': controls['captain'].errors && controls['captain'].touched || formSended,
+          'valid': controls['captain'].valid && controls['captain'].touched || formSended}">
+          <div class="form-check">
+            <input type="checkbox" formControlName="checked" class="form-check-input" 
+            [ngClass]="{'error': controls['checked'].errors && controls['checked'].touched || formSended,
+            'valid': controls['checked'].valid}"
+             value="checkedValue" checked>
+            <label class="form-check-label landing__form__conditions" for="">
+              He leído y acepto las políticas de tratamiento de datos personales
+            </label>
+          </div>
+          <button type="submit" class="btn btn-success landing__form__button">Siguiente</button>
+        </form>
+      </div>
+    </div>
+  </div>

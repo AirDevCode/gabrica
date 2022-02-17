@@ -1,0 +1,76 @@
+$white: #ffffff;
+$lightGray: #f7f7f7;
+$darkGray: #969696;
+$purple:#532478;
+$red: #fa0202;
+$green: #008512;
+
+.landing {
+
+  @media (max-width: 780px) {
+    margin-left: 5rem;
+  }
+  @media (max-width: 570px) {
+    margin-left: 0;
+  }
+
+  &__main-image {
+    width: 70%;
+    @media (max-width: 780px) {
+      margin-left: 8rem;
+      width: 50%;
+    }
+  
+    @media (max-width: 570px) {
+      margin-left: 6rem;
+    }
+  }
+  
+  &__form {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: $lightGray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  
+    h5 {
+      color: $darkGray;
+      font-weight: normal;
+    }
+  
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+  
+      span {
+        background-color: $purple;
+        color: $white;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        height: 1.5rem;
+        line-height: 1rem;
+      }
+    }
+  
+    &__button {
+      background-color: $purple;
+      color: $white;
+      border-radius: 1rem;
+    }
+  
+    &__conditions {
+      color: $purple;
+    }
+  }
+}
+
+.error {
+  border-color: $red;
+}
+
+.valid {
+  border-color: $green;
+}
